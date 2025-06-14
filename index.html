@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PDF Opener</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>PDF Opener</h1>
+      <p>Upload and view PDF files in your browser</p>
+    </div>
+    
+    <div class="upload-section">
+      <input type="file" id="pdfFile" accept=".pdf" />
+      <label for="pdfFile" class="upload-btn">
+        Choose PDF File
+      </label>
+      <div class="file-info" id="fileInfo"></div>
+    </div>
+    
+    <div class="viewer-section" id="viewerSection">
+      <div class="viewer-controls">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo">Page 1 of 1</span>
+        <button id="nextPage">Next</button>
+        <button id="zoomOut">Zoom Out</button>
+        <button id="zoomIn">Zoom In</button>
+      </div>
+      <canvas id="pdfCanvas"></canvas>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
